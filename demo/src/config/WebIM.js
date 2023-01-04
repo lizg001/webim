@@ -53,6 +53,8 @@ let options = {
     deviceId: WebIM.config.deviceId,
     //公有云 isHttpDNS 默认配置为true
     isHttpDNS: WebIM.config.isHttpDNS,
+    url: WebIM.config.socketServer,
+    apiUrl: WebIM.config.restServer,
     onOffline: () => {console.log('onOffline')},
     onOnline: () => {console.log('onOnline')}
 }
@@ -61,14 +63,14 @@ let options = {
 // if (window.location.href.indexOf('webim-hsb-ly.easemob.com') !== -1) {
 //     WebIM.config.isSandBox = true
 // }
-if (WebIM.config.isSandBox) {
-    options.url =  WebIM.config.socketServer // (window.location.protocol === 'https:' ? 'https:' : 'http:') + '//im-api-v2-hsb.easemob.com/ws'
-    options.apiUrl = WebIM.config.restServer // (window.location.protocol === 'https:' ? 'https:' : 'http:') + '//a1-hsb.easemob.com'
-    // options.url = `${window.location.protocol}//172.17.2.47:8280/ws`;
-    // options.apiUrl = `${window.location.protocol}//172.17.2.47:8080`;
-    // options.isHttpDNS = false
-    // WebIM.config.restServer = (window.location.protocol === "https:" ? "https:" : "http:") + '//a1-hsb.easemob.com';
-}
+// if (WebIM.config.isSandBox) {
+//     options.url =  WebIM.config.socketServer // (window.location.protocol === 'https:' ? 'https:' : 'http:') + '//im-api-v2-hsb.easemob.com/ws'
+//     options.apiUrl = WebIM.config.restServer // (window.location.protocol === 'https:' ? 'https:' : 'http:') + '//a1-hsb.easemob.com'
+//     // options.url = `${window.location.protocol}//172.17.2.47:8280/ws`;
+//     // options.apiUrl = `${window.location.protocol}//172.17.2.47:8080`;
+//     // options.isHttpDNS = false
+//     // WebIM.config.restServer = (window.location.protocol === "https:" ? "https:" : "http:") + '//a1-hsb.easemob.com';
+// }
 
 // WebIM.logger.setConfig({
 //     useCache: true,

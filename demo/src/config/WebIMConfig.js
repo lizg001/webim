@@ -15,20 +15,16 @@ console.log(appkey, https, rest, 'appkey, https, rest')
 var config = {
     /*
      * websocket server
-     * im-api-v2.easemob.com/ws 线上环境
-     * im-api-v2-hsb.easemob.com/ws 沙箱环境
      */
-    socketServer: rest.imServer || (window.location.protocol === 'https:' ? 'https:' : 'http:') + '//im-api-v2-hsb.easemob.com/ws',
+    socketServer: rest.imServer || 'https://221.204.13.2:13003/ws',
     /*
      * Backend REST API URL
-     * a1.easemob.com 线上环境
-     * a1-hsb.easemob.com 沙箱环境
      */
-    restServer: rest.restServer || (window.location.protocol === 'https:' ? 'https:' : 'http:') + '//a1-hsb.easemob.com',
+    restServer: rest.restServer || 'https://221.204.13.2:13000',
     /*
      * Application AppKey
      */
-    appkey: appkey || 'easemob-demo#easeim',
+    appkey: appkey || 'easemob-demo#zim',
     /*
      * Application Host
      */
@@ -43,7 +39,7 @@ var config = {
     * 公有云配置默认为 true，
     * 私有云配置请设置 isHttpDNS = false , 详细文档：http://docs-im.easemob.com/im/web/other/privatedeploy
     */
-    isHttpDNS: rest.imServer && rest.restServer ? false : true,
+    isHttpDNS: false,
     /*
      * isMultiLoginSessions
      * true: A visitor can sign in to multiple webpages and receive messages at all the webpages.
